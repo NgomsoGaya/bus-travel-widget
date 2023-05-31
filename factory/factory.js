@@ -10,6 +10,10 @@ function busTravel(){
 
     let noOf2Trips = 0;
 
+    let cost = 0;
+
+    let returnCost =0;
+
     let globalVariable1;
 //The first function should take in a parameter and return nothing
 function enterPoints(points){
@@ -36,18 +40,21 @@ function calculateTrips(radio, town){
     for (var key in costs) {
         if(key == "Khayelitsha" && town == "Khayelitsha"){
             costs[key] += (25/100)*40
+            cost = costs[key]
            noOf1Trips = globalVariable1 / costs[key]
-           noOf2Trips = noOf1Trips/2
+           noOf2Trips = noOf1Trips / 2
          }
          else if(key == "Dunoon" && town == "Dunoon"){
             costs[key] += (25/100)*25
+            cost = costs[key]
            noOf1Trips = globalVariable1 / costs[key]
-           noOf2Trips = noOf1Trips/2
+           noOf2Trips = noOf1Trips / 2
          }
          else if(key == "MitchellsPlain" && town == "MitchellsPlain"){
             costs[key] += (25/100)*30
+            cost = costs[key]
            noOf1Trips = globalVariable1 / costs[key]
-           noOf2Trips = noOf1Trips/2
+           noOf2Trips = noOf1Trips / 2
          }
     }   
     }
@@ -55,16 +62,19 @@ function calculateTrips(radio, town){
     else if(radio == 'Off-peak'){
         for (var keys in costs){
             if(keys == "Khayelitsha" && town == "Khayelitsha"){
+                cost = costs[keys]
               noOf1Trips = globalVariable1 / costs[keys]
-              noOf2Trips = noOf1Trips/2
+              noOf2Trips = noOf1Trips / 2
             }
             else if(keys == "Dunoon" && town == "Dunoon"){
+               cost = costs[keys]
               noOf1Trips = globalVariable1 / costs[keys]
-              noOf2Trips = noOf1Trips/2
+              noOf2Trips = noOf1Trips / 2
             }
             else if(keys == "MitchellsPlain" && town == "MitchellsPlain"){
+                cost = costs[keys]
               noOf1Trips = globalVariable1 / costs[keys]
-              noOf2Trips = noOf1Trips/2
+              noOf2Trips = noOf1Trips / 2
             }
         }
             
@@ -81,11 +91,13 @@ function getNumberOfSingleTrips(){
     return noOf1Trips
 }
 //the fourth one should get the price per single trip
-
+function getPricePerSingleTrip(){
+    return cost
+}
 //the fifth one should get the number of return trips if it is a return trip
 function getNumberOfReturnTrips(){
     if(noOf2Trips > 1){
-     noOf2Trips = Math.round(noOf1Trips)
+     noOf2Trips = Math.round(noOf2Trips)
     }
     else if(noOf2Trips< 1){
      noOf2Trips = 0
@@ -93,14 +105,19 @@ function getNumberOfReturnTrips(){
 return noOf2Trips
 }
 //the sixth one should get the price per return trip if it is a return trip
-
+function getPricePerReturnTrip(){
+    returnCost = cost*2
+    return returnCost
+}
 
 return {
     enterPoints,
     getEnteredPoints,
     calculateTrips,
     getNumberOfSingleTrips,
-    getNumberOfReturnTrips
+    getNumberOfReturnTrips,
+    getPricePerSingleTrip,
+    getPricePerReturnTrip
 }
 
 }

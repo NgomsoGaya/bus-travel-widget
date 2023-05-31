@@ -11,14 +11,14 @@
     <h1>Bus Travel Widget</h1>
     <div>
         <h3>Points:</h3>
-        <input type="text">
+        <input type="text" value="" class="pointInput">
     </div>
     <div>
         <h3>Start Location:</h3>
-        <select>
+        <select class="dropdown">
             <option value="Khayelitsha">Khayelitsha</option>
             <option value="Dunoon">Dunoon</option>
-            <option value="M/Plain">Mitchells Plain</option>
+            <option value="MitchellsPlain">Mitchells Plain</option>
         </select>   
     </div>
             
@@ -29,26 +29,26 @@
     <input type="radio" name="TravelTime" value="Off-peak" id="off">
     <label for="off">Off-peak</label>
 
-    <input type="checkbox" id="return" name="returnTrip">
+    <input type="checkbox" id="return" name="returnTrip" class="check">
     <label for="return">Return Trip</label>
 
-    <button>Calculate</button>
+    <button class="calculate">Calculate</button>
     <h2>Calculations</h2>
     <div>
         <h3>Number of single trips</h3>
-        <div class="square-display"></div>
+        <div class="square-display noOf1Trip"></div>
     </div>
     <div>
         <h3>Price per single trip</h3>
-        <div class="square-display"></div>
+        <div class="square-display priceOf1Trip"></div>
     </div>
     <div>
         <h3>Number of return trips</h3>
-        <div class="square-display"></div> 
+        <div class="square-display noOf2Trips"></div> 
     </div>
     <div>
         <h3>Price per return trip</h3>
-        <div class="square-display"></div>  
+        <div class="square-display priceOf2Trips"></div>  
     </div>
     
 
