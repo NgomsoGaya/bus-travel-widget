@@ -1,12 +1,22 @@
 
 function busTravel(){
     let cost = 0;
+    let globalVariable1;
 //The first function should take in a parameter and return nothing
 function enterPoints(points){
+    if(points){
     points
+    }
+    else if(!points){
+        points = 0
+    }
+    
+    globalVariable1 = points
 }
+
 function getEnteredPoints(){
-    return points
+    //globalVariable1 = points
+    return globalVariable1
 }
 //The second function should check which destination is lelected
 //Then check what is the travel time is it peak or not
@@ -15,13 +25,13 @@ function getEnteredPoints(){
 function calculateTrips(location){
     if(peak){
         if(location == "Khayelitsha"){
-           cost = 40 += (25/100)*40
+           //cost = 40 += (25/100)*40
         }
         else if(location == "Dunoon"){
-           cost = 40 += (25/100)*25
+           //cost = 40 += (25/100)*25
         }
         else if(location == "M/Plain"){
-           cost = 40 += (25/100)*30
+           //cost = 40 += (25/100)*30
         }
     }
     else if(off-peak){
