@@ -7,3 +7,8 @@
   div{
     display: flex;
   }
+
+  section {
+    position: relative;
+    text-align: center; 
+  }

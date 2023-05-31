@@ -92,7 +92,7 @@ function getNumberOfSingleTrips(){
 }
 //the fourth one should get the price per single trip
 function getPricePerSingleTrip(){
-    return cost
+    return "R"+cost
 }
 //the fifth one should get the number of return trips if it is a return trip
 function getNumberOfReturnTrips(){
@@ -106,8 +106,8 @@ return noOf2Trips
 }
 //the sixth one should get the price per return trip if it is a return trip
 function getPricePerReturnTrip(){
-    returnCost = cost*2
-    return returnCost
+    returnCost = cost*(2)
+    return "R"+returnCost
 }
 
 return {

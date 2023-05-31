@@ -157,7 +157,7 @@ describe("The Bus Travel Widget", function () {
     
            bustravel.enterPoints("120")
            bustravel.calculateTrips("Off-peak", 'MitchellsPlain')
-            assert.equal(30, bustravel.getPricePerSingleTrip())
+            assert.equal("R30", bustravel.getPricePerSingleTrip())
            
         })
    
@@ -167,7 +167,7 @@ describe("The Bus Travel Widget", function () {
     
            bustravel.enterPoints("150")
            bustravel.calculateTrips("Off-peak", 'Dunoon')
-            assert.equal(25, bustravel.getPricePerSingleTrip())
+            assert.equal('R25', bustravel.getPricePerSingleTrip())
            
         })
         it("It should return 40 if it is Offpeak and destination is Khayelitsha", function () {
@@ -176,7 +176,7 @@ describe("The Bus Travel Widget", function () {
     
            bustravel.enterPoints("320")
            bustravel.calculateTrips("Off-peak", 'Khayelitsha')
-            assert.equal(40, bustravel.getPricePerSingleTrip())
+            assert.equal('R40', bustravel.getPricePerSingleTrip())
            
         })
     })
@@ -188,7 +188,7 @@ describe("The Bus Travel Widget", function () {
         
                bustravel.enterPoints("120")
                bustravel.calculateTrips("Off-peak", 'MitchellsPlain')
-                assert.equal(60, bustravel.getPricePerReturnTrip())
+                assert.equal('R60', bustravel.getPricePerReturnTrip())
                
         })
        
@@ -198,7 +198,7 @@ describe("The Bus Travel Widget", function () {
         
                bustravel.enterPoints("150")
                bustravel.calculateTrips("Off-peak", 'Dunoon')
-                assert.equal(50, bustravel.getPricePerReturnTrip())
+                assert.equal('R50', bustravel.getPricePerReturnTrip())
                
         })
         it("It should return 40 if it is Offpeak and destination is Khayelitsha", function () {
@@ -207,7 +207,7 @@ describe("The Bus Travel Widget", function () {
         
                bustravel.enterPoints("320")
                bustravel.calculateTrips("Off-peak", 'Khayelitsha')
-                assert.equal(80, bustravel.getPricePerReturnTrip())
+                assert.equal('R80', bustravel.getPricePerReturnTrip())
                
         })
         })

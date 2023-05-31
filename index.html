@@ -8,19 +8,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <section>
     <h1>Bus Travel Widget</h1>
-    <div>
+    <span>
         <h3>Points:</h3>
         <input type="text" value="" class="pointInput">
-    </div>
-    <div>
+    </span>
+   
+    <span>
         <h3>Start Location:</h3>
         <select class="dropdown">
             <option value="Khayelitsha">Khayelitsha</option>
             <option value="Dunoon">Dunoon</option>
             <option value="MitchellsPlain">Mitchells Plain</option>
-        </select>   
-    </div>
+        </select> 
+    </span>
             
     <h2>Travel Times:</h2>
     <input type="radio" name="TravelTime" value="Peak" id="peak">
@@ -34,25 +36,17 @@
 
     <button class="calculate">Calculate</button>
     <h2>Calculations</h2>
-    <div>
-        <h3>Number of single trips</h3>
-        <div class="square-display noOf1Trip"></div>
-    </div>
-    <div>
-        <h3>Price per single trip</h3>
-        <div class="square-display priceOf1Trip"></div>
-    </div>
-    <div>
-        <h3>Number of return trips</h3>
-        <div class="square-display noOf2Trips"></div> 
-    </div>
-    <div>
-        <h3>Price per return trip</h3>
-        <div class="square-display priceOf2Trips"></div>  
-    </div>
-    
-
-
+    <span>
+        <h3>Number of single trips:</h3>
+        <span class="square-display noOf1Trip">0</span>
+        <h3>Price per single trip:</h3>
+        <span class="square-display priceOf1Trip">R0.00</span>
+        <h3>Number of return trips:</h3>
+        <span class="square-display noOf2Trips">0</span> 
+        <h3>Price per return trip:</h3>
+        <span class="square-display priceOf2Trips">R0.00</span>  
+    </span>
+    </section>
     <script src="./factory/factory.js"></script>
     <script src="./DOM/factory.dom.js"></script>
 </body>

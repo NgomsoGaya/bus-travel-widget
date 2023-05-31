@@ -13,19 +13,23 @@ function linkCalculateToDOM(){
     var travelTimeRadioBtn = document.querySelector("input[name='TravelTime']:checked");
     var checkReturnBtn = document.querySelector("input[name='returnTrip']:checked");
 
-    if(travelTimeRadioBtn){
+    if(travelTimeRadioBtn && !checkReturnBtn){
         bustravel.enterPoints(InputElement.value)
         bustravel.calculateTrips(travelTimeRadioBtn.value, dropdownElement.value)
         numberOf1TripElement.innerHTML = bustravel.getNumberOfSingleTrips() 
         priceOf1TripElement.innerHTML = bustravel.getPricePerSingleTrip()
     }
+
     console.log(InputElement.value)
     console.log(dropdownElement.value)
-    if(checkReturnBtn){
+
+    if(checkReturnBtn ){
         bustravel.enterPoints(InputElement.value)
         bustravel.calculateTrips(travelTimeRadioBtn.value, dropdownElement.value)
         numberOf2TripElement.innerHTML = bustravel.getNumberOfReturnTrips()
         priceOf2TripElement.innerHTML = bustravel.getPricePerReturnTrip()
+        //numberOf1TripElement.innerHTML = ""
+       // priceOf1TripElement.innerHTML = ""
     }
     
 
